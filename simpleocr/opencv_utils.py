@@ -73,9 +73,9 @@ class BlurProcessor(ImageProcessor):
 def ask_for_key(return_arrow_keys=True):
     key = 128
     while key > 127:
-        key = cv2.waitKey(0)
+        key = cv2.waitKeyEx(0)
         if return_arrow_keys:
-            if key in (65362, 65364, 65361, 65363):  # up, down, left, right
+            if key in (65362, 65364, 65361, 65363, 2490368 , 2621440, 2424832 , 2555904, 38, 40, 37, 39):  # up, down, left, right
                 return key
         key %= 256
     return key

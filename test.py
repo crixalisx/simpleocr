@@ -9,9 +9,9 @@ import cv2
 # temp_img = cv2.imread('./simpleocr/data/image_01.png')
 # cv2.imwrite('./simpleocr/data/image_01.png', 255- temp_img)
 
-img = open_image("image_01.png")
+img = open_image("<test_file_path>")  # relative or absolute
 
-segmenter = ContourSegmenter(blur_y=3, blur_x=3, block_size=7, c=10)
+segmenter = ContourSegmenter()
 segments = segmenter.process(img.image)
 # segmenter.display()
 terminal = UserGrounder()
