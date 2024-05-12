@@ -28,7 +28,7 @@ def classes_to_numpy(classes):
 def classes_from_numpy(classes):
     """reverses classes_to_numpy"""
     classes = classes if CLASSES_DIRECTION == 0 else classes.tranpose()
-    classes = list(map(unichr, classes))
+    classes = list(map(lambda x: unichr(int(x)), classes))
     return classes
 
 

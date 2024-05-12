@@ -82,7 +82,7 @@ def ask_for_key(return_arrow_keys=True):
 
 
 def background_color(image, numpy_result=True):
-    result = numpy.median(numpy.median(image, 0), 0).astype(numpy.int)
+    result = numpy.median(numpy.median(image, 0), 0).astype(int)
     if not numpy_result:
         try:
             result = tuple(map(int, result))
